@@ -2,12 +2,13 @@
 from sys import argv
 
 
-def main():
-    sum = 0
-    for i in range(1, len(argv)):
-        sum += int(argv[i])
-    print(sum)
+def add(args):
+    result = 0
+    if len(args) > 0:
+        for arg in args:
+            result += int(arg)
+    return result
 
 
-if __name__ == "__main__":
-    main()
+if (__name__ == '__main__'):
+    print(add(argv[1:]))
